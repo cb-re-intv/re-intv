@@ -22,8 +22,5 @@ jobs:
     - uses: Dreamcodeio/whats-the-pr-branch@master
       id: branchName
     
-    - name: set branch_name var
-      run: BRANCH_NAME="${{ steps.branchName.outputs.branchName }}"
-    
     - name: Determine pass/fail
-      run: if [ $BRANCH_NAME != *pass* ]; then echo "$BRANCH_NAME can't pass"; exit -1; fi
+      run: if [ ${{ steps.branchName.outputs.branchName }} != *pass* ]; then echo "can't pass"; exit -1; fi
