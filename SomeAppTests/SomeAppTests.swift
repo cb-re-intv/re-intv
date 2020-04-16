@@ -3,7 +3,7 @@
 //  SomeAppTests
 //
 //  Created by Jungho Bang on 4/15/20.
-//  Copyright © 2020 Coinbase. All rights reserved.
+//  Copyright © 2020 CB. All rights reserved.
 //
 
 import XCTest
