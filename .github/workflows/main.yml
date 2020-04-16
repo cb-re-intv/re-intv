@@ -23,4 +23,4 @@ jobs:
       id: branchName
     
     - name: Determine pass/fail
-      run: if [[ ${{ steps.branchName.outputs.branchName }} != *pass* ]]; then echo "can't pass"; exit -1; fi
+      run: if [[ ${{ steps.branchName.outputs.branchName }} != *master* ]]; then echo "can't pass"; exit -1; fi
