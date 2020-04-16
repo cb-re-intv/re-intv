@@ -19,11 +19,5 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-    - uses: actions/checkout@v2
-    
-    - name: Get branch name
-      uses: nelonoel/branch-name@v1
-
     - name: Determine pass/fail
-      run: if [ $BRANCH_NAME != *pass* ]; then echo "$BRANCH_NAME can't pass"; exit -1; fi
+      run: if [ $GITHUB_REF != *pass* ]; then echo "$GITHUB_REF can't pass"; exit -1; fi
