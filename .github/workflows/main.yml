@@ -26,4 +26,4 @@ jobs:
       uses: nelonoel/branch-name@v1
 
     - name: Determine pass/fail
-      run: [[ $BRANCH_NAME != *pass* ]] && exit -1
+      run: if [ $BRANCH_NAME != *pass* ]; then exit -1; fi
